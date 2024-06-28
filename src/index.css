@@ -1,38 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+/* Mobile First*/
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  font-synthesis: none; /* mengontrol bagaimana browser mensintesis gaya tipografi (weight, style, dan small-caps) ketika gaya tersebut tidak tersedia dalam font yang digunakan */
+  text-rendering: optimizeLegibility; /* wmengontrol bagaimana teks dirender oleh browser berdasarkan ligatur, kerding dan hinting */
+  -webkit-font-smoothing: antialiased; /* mengontrol bagaimana teks dirender pada browser berbasis WebKit, seperti Google Chrome dan Safari */
+  -moz-osx-font-smoothing: grayscale; /* mengontrol bagaimana teks dirender pada browser berbasis Gecko di sistem operasi macOS, seperti Mozilla Firefox */
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* place-items: center; ini mirip dengan align-item: center; dan tidak bisa membuat item di tepat di tengah (horizontal & vertical)*/
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {
@@ -54,7 +43,17 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+a {
+  font-weight: 600;
+  color: #646cff;
+}
+a:hover {
+  color: #535bf2;
+  cursor: pointer;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
   :root {
     color: #213547;
     background-color: #ffffff;
