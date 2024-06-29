@@ -19,9 +19,10 @@
 /* Card Block */
 .card {
   background: var(--dark-grayish-blue);
-  width: 350px;
+  width: 360px;
   min-height: 300px;
   border-radius: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,12 +31,16 @@
 
 .card__header {
   color: var(--neon-green);
-  font-size: 16px;
+  font-size: 12px;
+  letter-spacing: 6px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .card__text {
   color: var(--light-cyan);
   font-size: 28px;
+  margin: 20px;
 }
 
 .card__divider {
@@ -44,10 +49,27 @@
   background-position: center;
   width: 90%;
   height: 20px;
-  margin: 20px;
 }
 
 .card__button {
+  background: var(--neon-green);
+  background-image: url(./assets/images/icon-dice.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  margin: -10px;
+  position: relative;
+  bottom: -80px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.card__button:hover {
+  transform: rotate(20deg);
+  box-shadow: 0 0 10px hsl(150, 100%, 66%), 0 0 40px hsl(150, 100%, 66%), 0 0 80px hsl(150, 100%, 66%);
 }
 
 /* Attribution */
@@ -61,4 +83,11 @@
 
 /* Desktop */
 @media (min-width: 768px) {
+  .card {
+    width: 560px;
+
+    .card__divider {
+      background-image: url(./assets/images/pattern-divider-desktop.svg);
+    }
+  }
 }
