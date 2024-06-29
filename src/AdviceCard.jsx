@@ -7,7 +7,7 @@ const AdviceCard = () => {
   return (
     <div className="card">
       <h1 className="card__header">ADVICE # {"117"}</h1>
-      <p className="card__text">"{"Lorem ipsum dolor sit amet consectetur, adipisicing elit."}"</p>
+      <p className="card__text">"{"..."}"</p>
       <div className="card__divider"></div>
       <button className="card__button"></button>
     </div>
