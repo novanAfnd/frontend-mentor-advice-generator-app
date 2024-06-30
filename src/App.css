@@ -59,11 +59,34 @@
   position: absolute;
   bottom: -20px;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.5s; /* ini agar neon tampak menyala secara perlahan */
+}
+
+.card__button-rotating {
+  animation: rotate 1s ease-out; /* ease-out - specifies a transition effect with a slow end */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    background-position: 60% 60%;
+  }
+  25% {
+    background-position: 40% 60%;
+  }
+  50% {
+    background-position: 40% 40%;
+  }
+  75% {
+    background-position: 60% 60%;
+  }
+  100% {
+    transform: rotate(1080deg);
+    background-position: center;
+  }
 }
 
 .card__button:hover {
-  transform: rotate(10deg);
   box-shadow: 0 0 10px hsl(150, 100%, 66%), 0 0 40px hsl(150, 100%, 66%), 0 0 80px hsl(150, 100%, 66%);
 }
 
