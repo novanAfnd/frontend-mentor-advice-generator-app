@@ -37,7 +37,6 @@ body {
 }
 
 main {
-  background: white;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -54,7 +53,6 @@ a:hover {
 
 /* footer kali ini aku tidak menggunakan flex:1 pada main agar footer bisa dengan solid dan kokoh menempel di bagian bawah web */
 footer {
-  background: white;
   width: 100%;
   height: 40px;
   display: flex;
