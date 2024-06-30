@@ -7,15 +7,6 @@
   padding: 2rem;
 }
 
-.body {
-  width: 100%;
-  height: 90vh; /* mengambil seluruh ketinggian pada layar, 90 karena ini bukan boy utama */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Card Block */
 .card {
   background: var(--dark-grayish-blue);
@@ -72,14 +63,14 @@
 }
 
 .card__button:hover {
-  transform: rotate(20deg);
+  transform: rotate(10deg);
   box-shadow: 0 0 10px hsl(150, 100%, 66%), 0 0 40px hsl(150, 100%, 66%), 0 0 80px hsl(150, 100%, 66%);
 }
 
 /* Attribution */
 .attribution {
   font-size: 11px;
-  text-align: center;
+  /* text-align: center;  ini sebenarnya tidak perlu karena pada #root sudah ada text-align */
 }
 .attribution a {
   color: hsl(228, 45%, 44%);

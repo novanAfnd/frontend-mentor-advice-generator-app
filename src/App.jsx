@@ -3,7 +3,7 @@ import AdviceCard from "./AdviceCard";
 
 function App() {
   return (
-    <div className="body">
+    <>
       <main>
         <AdviceCard />
       </main>
@@ -17,7 +17,7 @@ function App() {
           Coded by <a href="#">Novan Afandi</a>
         </div>
       </footer>
-    </div>
+    </>
   );
 }
 

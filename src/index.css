@@ -11,10 +11,8 @@
   -moz-osx-font-smoothing: grayscale; /* mengontrol bagaimana teks dirender pada browser berbasis Gecko di sistem operasi macOS, seperti Mozilla Firefox */
 
   /* Color CSS custom properties */
-
   --light-cyan: hsl(193, 38%, 86%);
   --neon-green: hsl(150, 100%, 66%);
-
   --grayish-blue: hsl(217, 19%, 38%);
   --dark-grayish-blue: hsl(217, 19%, 24%);
   --dark-blue: hsl(218, 23%, 16%);
@@ -31,10 +29,16 @@ body {
   width: 100%;
   height: 100vh; /* mengambil seluruh ketinggian pada layar */
   /* place-items: center; ini mirip dengan align-item: center; dan tidak bisa membuat item di tepat di tengah (horizontal & vertical)*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 main {
-  flex: 1; /* flex 1 ini bisa berfungsi karena adanya div dengan class body */
+  background: white;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,6 +50,20 @@ a {
 }
 a:hover {
   color: #535bf2;
+}
+
+/* footer kali ini aku tidak menggunakan flex:1 pada main agar footer bisa dengan solid dan kokoh menempel di bagian bawah web */
+footer {
+  background: white;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 /* Desktop */
