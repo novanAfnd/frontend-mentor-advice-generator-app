@@ -8,10 +8,19 @@ const AdviceCard = () => {
   const [adviceText, setAdviceText] = useState("...");
   const [rotate, setRotate] = useState(false); // tetapkan dulu rotate = false
 
-  // Aku tidak menggunakan useEffect karena advice akan ditampilkan setelah button diklik
-  const fetchAdvice = () => {
-    fetch("https://api.adviceslip.com/advice")
-      .then((result) => result.json())
+  // URL untuk adivce pertama (117) dan URL untuk advice setelahnya
+  const FIRST_ADVICE_URL = "https://api.adviceslip.com/advice/117"; // advice default
+  const RANDOM_ADVICE_URL = "https://api.adviceslip.com/advice"; // advice random setelah advice default
+
+  // Untuk pertama kali render advice 117
+  useEffect(() => {
+    fetchAdvice(FIRST_ADVICE_URL);
+  }, []);
+
+  // Selanjutnya render advice random
+  const fetchAdvice = (url) => {
+    fetch(url)
+      .then((respon) => respon.json())
       .then((data) => {
         setAdviceId(data.slip.id);
         setAdviceText(data.slip.advice);
@@ -23,7 +32,7 @@ const AdviceCard = () => {
 
     setTimeout(() => {
       setRotate(false); // buat rotate menjadi false setelah 1 detik
-      fetchAdvice(); // tampilkan advice saat animasi dice berhenti berputar
+      fetchAdvice(RANDOM_ADVICE_URL); // kita pass variable random advice
     }, 1000);
   }
 
