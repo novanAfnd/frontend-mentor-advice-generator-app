@@ -8,13 +8,13 @@ const AdviceCard = () => {
   const [adviceText, setAdviceText] = useState("...");
   const [rotate, setRotate] = useState(false); // tetapkan dulu rotate = false
 
-  // URL untuk adivce pertama (117) dan URL untuk advice setelahnya
-  const FIRST_ADVICE_URL = "https://api.adviceslip.com/advice/117"; // advice default
+  // URL untuk adivce pertama (117) dan URL untuk advice random setelahnya
+  const DEFAULT_ADVICE_URL = "https://api.adviceslip.com/advice/117"; // advice default
   const RANDOM_ADVICE_URL = "https://api.adviceslip.com/advice"; // advice random setelah advice default
 
   // Untuk pertama kali render advice 117
   useEffect(() => {
-    fetchAdvice(FIRST_ADVICE_URL);
+    fetchAdvice(DEFAULT_ADVICE_URL);
   }, []);
 
   // Selanjutnya render advice random
